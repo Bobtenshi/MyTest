@@ -1,0 +1,14 @@
+autopep8==1.6.0
+black==22.3.0
+hydra-core==1.2.0
+joblib==1.1.0
+librosa==0.9.1
+natsort==8.1.0
+pandas==1.4.2
+scipy==1.8.1
+pyroomacoustics == 0.6.0
+matplotlib == 3.5.2
+tqdm == 4.64.0
+pandas == 1.4.2
+seaborn == 0.11.2
+tensorflow == 2.9.1

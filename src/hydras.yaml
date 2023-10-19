@@ -1,0 +1,73 @@
+# !/usr/bin/env python
+# -*- coding: utf-8 -*-
+# auther: yamaji syuhei (hei8maji@gmail.com)
+
+const:
+  # stage settings
+  # 0: train ChimeraACVAE source model
+  # 1: test (pre-)trained model with wsj0 dataset
+  # 2: evaluate output
+  # 3: conclude results
+  stage: 1
+  stop_stage: 2
+  dataset: "jvs"
+
+  # input directories
+  data_root: "./data/"
+  model_root: "./model/"
+  # training setting
+  pretrained_model: ""
+  test_mode: "trained"
+
+  win_type: "hamming"
+  win_len: 2048
+  win_shift: 1024
+  seg_len: 128
+  iteration: 30
+
+  test_dataset: "more-speaker" # wsj0 dataset
+  gpu_card: "1"
+  cal_imp: False
+  source: None
+
+arg:
+  train_data: None
+  teacher_model: None
+  # output directories
+  save_model_root: None
+  save_output_root: None
+  save_result_root: None
+  test_dataset_name: None
+  test_data: None
+  test_folder: None
+  model_path: None
+  output_path: None
+  test_dataset_folders: None
+  label_dim: None
+
+  input_dir: None
+  ref_dir: None
+  output_dir: None
+  result_dir: None
+  sources: None
+
+params:
+  multiprocessing: False
+  line_notify: False
+  select: [1, 19]
+  n_updateW: 1
+
+  modeling_method: None
+  retrain_model_type: "AE"
+  retrain_loss: "ISdiv"
+
+  rule_updateW: "IP1"
+  rule_eval: "SI_SDR"
+
+  save_as_dataset: True
+  nch: None
+  train_or_test: None
+  data_num: None
+
+glaph:
+  compare_methods: "all"
